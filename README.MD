@@ -1,10 +1,12 @@
 # MuleSoft Runtime - Automated Provisioning Guidelines
 
-The following guidelines are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
+These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments.
 
-The first section provides information about the Mule Runtime Dockerization. 
+These are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
 
-The second second section provides information about hybrid servers automaetd regitsration in Anypoint Runtime Manager (ARM), and automated cluster creation.
+The first section provides information about the Mule Runtime Dockerization.
+
+The second section provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
 
 The scripts provided can be used both for ARM registration in the US or EU management plane.
 
