@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<property-set>
+  <property key="java.util.prefs:/com/mulesource/licm//license" type="text">Copy license text here</property>
+</property-set>
+
