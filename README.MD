@@ -15,8 +15,8 @@ Information about Mule Runtime Docker image creation, container creation, execut
 ### Pre-requisites
 
 * Docker Version 17.12+
-* Download MuleSoft Runtime zip file: 3.8.X / 3.9.x. https://docs.mulesoft.com/release-notes/mule-esb
-    * Name it *after mule-ee-distribution-standalone-VERSION.zip* 
+* Download the MuleSoft Runtime: 3.8.X / 3.9.x. https://docs.mulesoft.com/release-notes/mule-esb
+    * Rename the zip file to: *mule-ee-distribution-standalone-VERSION.zip* 
     * It must be placed at the Dockerfile label.
 * MuleSoft Runtime Manager Agent Version: 1.9.4+
 * Copy your runtime license to *muleLicenseKey.lic*
