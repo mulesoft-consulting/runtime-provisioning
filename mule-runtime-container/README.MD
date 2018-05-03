@@ -1,8 +1,11 @@
 # MuleSoft Runtime - Automated Provisioning Guidelines
 
 The following guidelines are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
+
 The first section provides information about the Mule Runtime Dockerization. 
+
 The second second section provides information about hybrid servers automaetd regitsration in Anypoint Runtime Manager (ARM), and automated cluster creation.
+
 The scripts provided can be used both for ARM registration in the US or EU management plane.
 
 ## Dockerizing Mule Runtime EE
@@ -13,8 +16,8 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
 * Docker Version 17.12+
 * MuleSoft Runtime Zip file: 3.8.X / 3.9.x. 
-** Name it *after mule-ee-distribution-standalone-VERSION* 
-** It must be placed at the Dockerfile label.
++ Name it *after mule-ee-distribution-standalone-VERSION* 
++ It must be placed at the Dockerfile label.
 * MuleSoft Runtime Manager Agent Version: 1.9.4+
 * Copy your runtime license to *muleLicenseKey.lic*
 
