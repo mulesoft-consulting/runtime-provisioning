@@ -1,8 +1,11 @@
 # MuleSoft Runtime - Automated Provisioning Guidelines
 
 The following guidelines are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
+
 The first section provides information about the Mule Runtime Dockerization. 
+
 The second second section provides information about hybrid servers automaetd regitsration in Anypoint Runtime Manager (ARM), and automated cluster creation.
+
 The scripts provided can be used both for ARM registration in the US or EU management plane.
 
 ## Dockerizing Mule Runtime EE
@@ -13,15 +16,15 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
 * Docker Version 17.12+
 * MuleSoft Runtime Zip file: 3.8.X / 3.9.x. 
-** Name it *after mule-ee-distribution-standalone-VERSION* 
-** It must be placed at the Dockerfile label.
+    * Name it *after mule-ee-distribution-standalone-VERSION* 
+    * It must be placed at the Dockerfile label.
 * MuleSoft Runtime Manager Agent Version: 1.9.4+
 * Copy your runtime license to *muleLicenseKey.lic*
 
 ### Build Docker Image Of the Mule Runtime
 
 1. Run:
-```$> ./build-container.sh {image_tag} ```
+```$> ./build_container.sh {image_tag} ```
 
     Example:
         ```
@@ -38,10 +41,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ---> Using cache
         ---> 3b51de035ecb
         Step 4/21 : COPY ./mule-ee-distribution-standalone-$MULE_VERSION.zip /opt/
-        COPY failed: stat /var/lib/docker/tmp/docker-builder355292189/mule-ee-distribution-standalone-3.8.5.zip: no such file or directory
-        BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$
         ```
-        
     2. Run ```docker image ls```  the new image should be listed.
     
     Example:
@@ -52,7 +52,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ```
 
 ### Create the Container
-1. Run: ```sudo ./run-container.sh {image_tag}```
+1. Run: ```sudo ./run_container.sh {image_tag}```
 
     Example:
         ```
@@ -120,7 +120,6 @@ This steps will allow you to automate the Runtime Server registration to ARM, ad
 ```
 [...] Communication between Anypoint Management Center and the Mule Agent is authorized by using two way SSL verification. In the following step we are 
 going to create a keystore and request Anypoint Management Center to sign it. Your private key will never leave your machine.
-
 
 Sending Sign request to Anypoint Management Center 
 
