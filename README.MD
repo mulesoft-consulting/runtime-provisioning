@@ -109,15 +109,13 @@ This steps will allow you to automate the Runtime Server registration to ARM, ad
 
 2. Register the Runtime
 
-```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh  -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
-
-```docker exec -it {mule_container_name} /opt/mule/bin/mule restart```
+```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh  -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName} --server-ip {server_ip_addr}```
 
 **Important.** To register the server in the EU Management Plane (eu1 region), add the ```--region eu1``` parameter.
 
 #### Example
 
-```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
+```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName} --server-ip {server_ip_addr}```
 
 **Important.** If your password contains special characters, these must be scaped using a backslash '\'. Example: Is your password is passw%rd! then it must be written like this passw\\%rd\\! and do not  use quotes or double quotes around it.
 ```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p passw\%rd\! -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
