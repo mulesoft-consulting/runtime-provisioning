@@ -76,13 +76,20 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
 ### Removing the Docker Image
 
-1. Remove Docker Image: ```$> docker image rm --force {repository}:{tag} ```
+1. List Docker images: ```$> docker image ls  ```
+```
+juan.porcel@BA-JPORCE-OSX:~/Documents/code/github/runtime-provisioning$ docker image ls
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+mule-ee-runtime-3.8.5   6.0.1               3364aa1d001e        3 hours ago         1.84GB
+mule-ee-runtime-3.8.5   5.0.1               73e701c1401c        5 hours ago         1.84GB
+node                    carbon              4635bc7d130c        4 weeks ago         673MB
+openjdk                 8                   891c9734d5ab        6 weeks ago         726MB
+```
+2. Remove Docker Image: ```$> docker image rm --force {image_id} ```
 
     Example:
-        ```$> docker image rm --force mule-ee-runtime-3.8.5:1.0.9 ```
+        ```$> docker image rm --force 73e701c1401c ```
         
-2. Verify the Image has been effectively removed: ```docker image ls```
-
 ### Anypoint Runtime Manager - Hybrid Setup
 
 The following information is useful to automate hybrid servers registration in ARM, create clusters, add servers to clusters, and remove servers from clusters.
