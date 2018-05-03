@@ -21,7 +21,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
 ### Build Docker Image Of the Mule Runtime
 
 1. Run:
-```$> ./build-container.sh {image_tag} ```
+```$> ./build_container.sh {image_tag} ```
 
     Example:
         ```
@@ -38,10 +38,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ---> Using cache
         ---> 3b51de035ecb
         Step 4/21 : COPY ./mule-ee-distribution-standalone-$MULE_VERSION.zip /opt/
-        COPY failed: stat /var/lib/docker/tmp/docker-builder355292189/mule-ee-distribution-standalone-3.8.5.zip: no such file or directory
-        BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$
         ```
-        
     2. Run ```docker image ls```  the new image should be listed.
     
     Example:
@@ -52,7 +49,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ```
 
 ### Create the Container
-1. Run: ```sudo ./run-container.sh {image_tag}```
+1. Run: ```sudo ./run_container.sh {image_tag}```
 
     Example:
         ```
@@ -120,7 +117,6 @@ This steps will allow you to automate the Runtime Server registration to ARM, ad
 ```
 [...] Communication between Anypoint Management Center and the Mule Agent is authorized by using two way SSL verification. In the following step we are 
 going to create a keystore and request Anypoint Management Center to sign it. Your private key will never leave your machine.
-
 
 Sending Sign request to Anypoint Management Center 
 
