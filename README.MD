@@ -163,7 +163,9 @@ Example:  ```docker exec -it {mule_container_name} /opt/mule/bin/amc_setup --reg
 2. Restart the Runtime.  ```docker exec -it {mule_container_name} /opt/mule/bin/mule restart```
 
 ### Related assets
-These assets are based on the following resources:
-1. https://wiki.corp.mulesoft.com/display/SVCS/Dockerizing+Mule+ESB
-2. https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+runtime+in+ARM+programatically
+These assets are related to the following resources:
+* https://wiki.corp.mulesoft.com/display/SVCS/Dockerizing+Mule+ESB
+* https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+runtime+in+ARM+programatically
+* https://docs.mulesoft.com/runtime-manager/runtime-manager-agent-architecture
+
 
