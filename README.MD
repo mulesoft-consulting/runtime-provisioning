@@ -1,4 +1,4 @@
-# MuleSoft Runtime - Automated Provisioning Guidelines
+# Mule Runtime - Automated Provisioning Guidelines
 
 These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments.
 
