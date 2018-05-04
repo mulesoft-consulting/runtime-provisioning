@@ -44,9 +44,12 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ---> 3b51de035ecb
         Step 4/21 : COPY ./mule-ee-distribution-standalone-$MULE_VERSION.zip /opt/
         ```
+        
     2. Run ```docker image ls```  the new image should be listed.
-    
+   
+   
     Example:
+    
         ```
         BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$ docker image ls
         REPOSITORY                            TAG                 IMAGE ID            CREATED             SIZE
