@@ -4,11 +4,13 @@ These assets and documentation enable automation of MuleSoft runtime provisionin
 
 These are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
 
-The first section provides information about the Mule Runtime Dockerization.
+The first section *Dockerizing Mule Runtime EE* provides information about the Mule Runtime Dockerization.
 
-The second section provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
+The second section *Anypoint Runtime Manager - Hybrid Setup* provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
 
 The scripts provided can be used both for ARM registration in the US or EU management plane.
+
+All assets in ```mule-runtime-container``` folder.
 
 ## Dockerizing Mule Runtime EE
 
