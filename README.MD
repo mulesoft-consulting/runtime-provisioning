@@ -7,7 +7,6 @@ These are intended for devops team / developers working on automating MuleSoft R
 The first section *Dockerizing Mule Runtime EE* provides information about the Mule Runtime Dockerization.
 
 The second section *Anypoint Runtime Manager - Hybrid Setup* provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
-
 The scripts provided can be used both for ARM registration in the US or EU management plane.
 
 All assets in ```mule-runtime-container``` folder.
