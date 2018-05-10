@@ -1,12 +1,15 @@
-# MuleSoft Runtime - Automated Provisioning Guidelines
+# Mule Runtime - Automated Provisioning Guidelines
 
-The following guidelines are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
+These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments.
 
-The first section provides information about the Mule Runtime Dockerization. 
+These are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
 
-The second second section provides information about hybrid servers automaetd regitsration in Anypoint Runtime Manager (ARM), and automated cluster creation.
+The first section *Dockerizing Mule Runtime EE* provides information about the Mule Runtime Dockerization.
 
+The second section *Anypoint Runtime Manager - Hybrid Setup* provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
 The scripts provided can be used both for ARM registration in the US or EU management plane.
+
+All assets in ```mule-runtime-container``` folder.
 
 ## Dockerizing Mule Runtime EE
 
@@ -15,8 +18,8 @@ Information about Mule Runtime Docker image creation, container creation, execut
 ### Pre-requisites
 
 * Docker Version 17.12+
-* Download MuleSoft Runtime zip file: 3.8.X / 3.9.x. https://docs.mulesoft.com/release-notes/mule-esb
-    * Name it *after mule-ee-distribution-standalone-VERSION.zip* 
+* Download the MuleSoft Runtime: 3.8.X / 3.9.x. https://docs.mulesoft.com/release-notes/mule-esb
+    * Rename the zip file to: *mule-ee-distribution-standalone-VERSION.zip* 
     * It must be placed at the Dockerfile label.
 * MuleSoft Runtime Manager Agent Version: 1.9.4+
 * Copy your runtime license to *muleLicenseKey.lic*
@@ -42,9 +45,12 @@ Information about Mule Runtime Docker image creation, container creation, execut
         ---> 3b51de035ecb
         Step 4/21 : COPY ./mule-ee-distribution-standalone-$MULE_VERSION.zip /opt/
         ```
+        
     2. Run ```docker image ls```  the new image should be listed.
-    
+   
+   
     Example:
+    
         ```
         BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$ docker image ls
         REPOSITORY                            TAG                 IMAGE ID            CREATED             SIZE
@@ -76,13 +82,20 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
 ### Removing the Docker Image
 
-1. Remove Docker Image: ```$> docker image rm --force {repository}:{tag} ```
+1. List Docker images: ```$> docker image ls  ```
+```
+juan.porcel@BA-JPORCE-OSX:~/Documents/code/github/runtime-provisioning$ docker image ls
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+mule-ee-runtime-3.8.5   6.0.1               3364aa1d001e        3 hours ago         1.84GB
+mule-ee-runtime-3.8.5   5.0.1               73e701c1401c        5 hours ago         1.84GB
+node                    carbon              4635bc7d130c        4 weeks ago         673MB
+openjdk                 8                   891c9734d5ab        6 weeks ago         726MB
+```
+2. Remove Docker Image: ```$> docker image rm --force {image_id} ```
 
     Example:
-        ```$> docker image rm --force mule-ee-runtime-3.8.5:1.0.9 ```
+        ```$> docker image rm --force 73e701c1401c ```
         
-2. Verify the Image has been effectively removed: ```docker image ls```
-
 ### Anypoint Runtime Manager - Hybrid Setup
 
 The following information is useful to automate hybrid servers registration in ARM, create clusters, add servers to clusters, and remove servers from clusters.
@@ -102,15 +115,13 @@ This steps will allow you to automate the Runtime Server registration to ARM, ad
 
 2. Register the Runtime
 
-```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh  -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
-
-```docker exec -it {mule_container_name} /opt/mule/bin/mule restart```
+```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh  -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName} --server-ip {server_ip_addr}```
 
 **Important.** To register the server in the EU Management Plane (eu1 region), add the ```--region eu1``` parameter.
 
 #### Example
 
-```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
+```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p {password} -o {orgName} -e {envName} -s {serverName} -c {clusterName} --server-ip {server_ip_addr}```
 
 **Important.** If your password contains special characters, these must be scaped using a backslash '\'. Example: Is your password is passw%rd! then it must be written like this passw\\%rd\\! and do not  use quotes or double quotes around it.
 ```docker exec -it {mule_container_name} /opt/mule/bin/arm_register_server.sh --region eu1 -u {username} -p passw\%rd\! -o {orgName} -e {envName} -s {serverName} -c {clusterName}```
@@ -163,7 +174,9 @@ Example:  ```docker exec -it {mule_container_name} /opt/mule/bin/amc_setup --reg
 2. Restart the Runtime.  ```docker exec -it {mule_container_name} /opt/mule/bin/mule restart```
 
 ### Related assets
-These assets are based on the following resources:
-1. https://wiki.corp.mulesoft.com/display/SVCS/Dockerizing+Mule+ESB
-2. https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+runtime+in+ARM+programatically
+These assets are related to the following resources:
+* https://wiki.corp.mulesoft.com/display/SVCS/Dockerizing+Mule+ESB
+* https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+runtime+in+ARM+programatically
+* https://docs.mulesoft.com/runtime-manager/runtime-manager-agent-architecture
+
 
