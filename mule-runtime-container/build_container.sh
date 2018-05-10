@@ -1,6 +1,6 @@
 #!/bin/bash  
 image_tag=${1}
-mule_version=3.8.5
+mule_version=3.9.0
 repository=mule-ee-runtime-${mule_version}
 
 docker --version

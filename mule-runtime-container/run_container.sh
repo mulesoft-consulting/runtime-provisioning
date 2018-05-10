@@ -1,7 +1,7 @@
 #!/bin/bash  
 
 image_tag=$1
-mule_version=3.8.5
+mule_version=3.9.0
 repository=mule-ee-runtime-${mule_version}
 container=mule-ee-runtime-${mule_version}-${image_tag}
 # From this shared directory between the host operating system and the Docker container, you will have access to log files.
@@ -12,6 +12,6 @@ Echo "Running Docker Container: ${container}"
 docker run -it -d -p 8081:8081 -v "${mule_logs_dir}":/opt/mule/logs --name ${container} ${repository}:${image_tag} 
 docker ps -a
 echo "TIP #1: Run 'docker ps -a' to list and check Docker container(s) status. "
-echo "TIP #2: Run 'docker exec -it {mule_container_name} /opt/mule/bin/mule start' to start the Mule Runtime. "
+echo "TIP #2: Run 'docker exec -it ${container} /opt/mule/bin/mule start' to start the Mule Runtime. "
 
 
