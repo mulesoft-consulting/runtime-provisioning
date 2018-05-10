@@ -70,7 +70,7 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
     Example:
         ```
-        BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$ sudo ./run-container.sh 1.0.7
+        BA-JPORCEL-OSX:mule-runtime-container-390 juanporcel$ sudo ./run-container.sh 1.0.7
         13ac1e2c66ba679abae7e0479a83d6225cfb8c3708bece46aa51f484b5edb2cf
         CONTAINER ID        IMAGE                         COMMAND                  CREATED                  STATUS                    PORTS                                                                                NAMES
         13ac1e2c66ba        mule-ee-runtime-3.9.0:1.0.7   "/opt/mule/bin/mule …"   Less than a second ago   Up Less than a second     443/tcp, 1098/tcp, 5000/tcp, 5701/tcp, 8091/tcp, 54327/tcp, 0.0.0.0:8081->8081/tcp   mule-ee-runtime-3.8.5-1.0.7
@@ -154,7 +154,7 @@ Server jmporcel-local-node-a-8 found ID: 99006
 Getting cluster details from https://eu1.anypoint.mulesoft.com/hybrid/api/v1/clusters...
 Server jmporcel-local-node-a-8 is not clustered, create Cluster: jmporcel-test-cluster-8
 Create Cluster Payload: {"name": "jmporcel-test-cluster-8", "multicastEnabled": false, "servers": [ {"serverId" : 99006, "serverIp":"10.8.8.51"} ]}
-{"data":{"id":99007,"timeCreated":1525295609350,"timeUpdated":1525295609350,"name":"jmporcel-test-cluster-8","type":"CLUSTER","status":"RUNNING","multicastEnabled":false,"primaryNodeId":null,"servers":[{"id":99006,"timeCreated":1525295580195,"timeUpdated":1525295609354,"name":"jmporcel-local-node-a-8","type":"SERVER","serverType":"GATEWAY","muleVersion":"3.8.5","gatewayVersion":"3.8.5","agentVersion":"1.9.4","licenseExpirationDate":1668470400000,"status":"RUNNING","addresses":[{"ip":"172.17.0.2","networkInterface":"eth0"}],"clusterId":99007,"clusterName":"jmporcel-test-cluster-8","serverIp":"10.8.8.51","runtimeInformation":{"jvmInformation":{"runtime":{"name":"Oracle JDK Environment","version":"1.8.0_162-8u162-b12-1~deb9u1-b12"},"specification":{"vendor":"Oracle Corporation","name":"Java Platform API Specification","version":"1.8"}},"osInformation":{"name":"Linux","version":"4.9.87-linuxkit-aufs","architecture":"amd64"},"muleLicenseExpirationDate":1668470400000}}],"visibilityMap":{"mapNodes":[{"serverId":99006,"visibleNodeIds":[],"unknownNodeIps":[]}]}}}Done.
+{"data":{"id":99007,"timeCreated":1525295609350,"timeUpdated":1525295609350,"name":"jmporcel-test-cluster-8","type":"CLUSTER","status":"RUNNING","multicastEnabled":false,"primaryNodeId":null,"servers":[{"id":99006,"timeCreated":1525295580195,"timeUpdated":1525295609354,"name":"jmporcel-local-node-a-8","type":"SERVER","serverType":"GATEWAY","muleVersion":"3.9.0","gatewayVersion":"3.9.0","agentVersion":"1.9.4","licenseExpirationDate":1668470400000,"status":"RUNNING","addresses":[{"ip":"172.17.0.2","networkInterface":"eth0"}],"clusterId":99007,"clusterName":"jmporcel-test-cluster-8","serverIp":"10.8.8.51","runtimeInformation":{"jvmInformation":{"runtime":{"name":"Oracle JDK Environment","version":"1.8.0_162-8u162-b12-1~deb9u1-b12"},"specification":{"vendor":"Oracle Corporation","name":"Java Platform API Specification","version":"1.8"}},"osInformation":{"name":"Linux","version":"4.9.87-linuxkit-aufs","architecture":"amd64"},"muleLicenseExpirationDate":1668470400000}}],"visibilityMap":{"mapNodes":[{"serverId":99006,"visibleNodeIds":[],"unknownNodeIps":[]}]}}}Done.
 juan.porcel@BA-JPORCE-OSX:~/Documents/code/bitbucket/mulesoftautomation/mule-runtime-container-385$
 ```
 
