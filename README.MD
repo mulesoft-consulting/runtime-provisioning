@@ -16,7 +16,7 @@ Software components and versions used.
 
 * MuleSoft Runtime Version: 3.9.0
 * MuleSoft Runtime Manager Agent Version: 1.9.4
-* JDK Version: OpenJDK 8 (Docker Library)
+* JDK Version: Oracle JDK 1.8
 
 ## Dockerizing the Mule Runtime EE
 
