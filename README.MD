@@ -26,6 +26,9 @@ Information about Mule Runtime Docker image creation, container creation, execut
 
 * Docker Version 17.12+
 * Download the MuleSoft Runtime: 3.8.X / 3.9.x. https://docs.mulesoft.com/release-notes/mule-esb
+    * If not using the latest 3.8/3.9 version Runtime Manager Agent (RMA) must be upgraded.
+         * Unzip Mule Runtime and upgrade the RMA as per official documentation https://docs.mulesoft.com/runtime-manager/installing-and-configuring-runtime-manager-agent  
+         * Zip back the upgraded runtime.
     * Rename the zip file to: *mule-ee-distribution-standalone-VERSION.zip* 
     * It must be placed at the Dockerfile label.
 * MuleSoft Runtime Manager Agent Version: 1.9.4+
