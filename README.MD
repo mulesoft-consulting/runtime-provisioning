@@ -1,6 +1,6 @@
 # Mule Runtime - Automated Provisioning Guidelines
 
-These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments.
+These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments when not using the **Anypoint Runtime Fabric** for multi-cloud deployments (recommended option).
 
 These are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
 
