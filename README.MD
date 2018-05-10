@@ -36,27 +36,28 @@ Information about Mule Runtime Docker image creation, container creation, execut
 1. Run:
 ```$> ./build_container.sh {image_tag} ```
 
-    Example:
+    Console output example
+    
         ```
         BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$ ./build-container.sh 1.0.5
         Docker version 17.12.0-ce, build c97c6d6
         Image Id: mule-runtime-3.9.0:1.0.5
         Sending build context to Docker daemon  381.1MB
-        Step 1/21 : FROM openjdk:8
+        Step 1/21 : FROM ubuntu:16.04
         ---> 891c9734d5ab
-        Step 2/21 : MAINTAINER Bank Of Ireland, Republic of Ireland
+        Step 2/21 : MAINTAINER MuleSoft
         ---> Using cache
         ---> 3ba5815e0acb
         Step 3/21 : ENV MULE_VERSION=3.9.0
         ---> Using cache
         ---> 3b51de035ecb
         Step 4/21 : COPY ./mule-ee-distribution-standalone-$MULE_VERSION.zip /opt/
+        (...)
         ```
         
     2. Run ```docker image ls```  the new image should be listed.
    
-   
-    Example:
+    Example
     
         ```
         BA-JPORCEL-OSX:mule-runtime-container-385 juanporcel$ docker image ls
