@@ -1,15 +1,15 @@
-# Mule Runtime - Automated Provisioning Guidelines
+# MuleSoft Runtime - Automated Provisioning Guidelines
 
 These assets and documentation enable automation of MuleSoft runtime provisioning for Hybrid deployments when not using the **Anypoint Runtime Fabric** for multi-cloud deployments (recommended option).
 
 These are intended for devops team / developers working on automating MuleSoft Runtime Provisioning.
 
-The first section *Dockerizing the Mule Runtime EE* provides information about the Mule Runtime Dockerization.
+The first section *Dockerizing the Mule Runtime EE* provides information about the MuleSoft Runtime Dockerization.
 
 The second section *Anypoint Runtime Manager - Hybrid Setup* provides information about hybrid servers automated registration in Anypoint Runtime Manager (ARM), and automated cluster creation.
 The scripts provided can be used both for ARM registration in the US or EU management plane.
 
-All assets in ```mule-runtime-container``` folder.
+All assets are located in the ```mule-runtime-container``` folder.
 
 ## Components 
 Software components and versions used.
