@@ -187,7 +187,7 @@ Example:  ```docker exec -it {mule_container_name} /opt/mule/bin/amc_setup --reg
 ### Related assets
 These assets are related to the following resources:
 * https://wiki.corp.mulesoft.com/display/SVCS/Dockerizing+Mule+ESB
-* https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+runtime+in+ARM+programatically
+* https://wiki.corp.mulesoft.com/display/SVCS/Register+Mule+Runtime+to+ARM+Programatically
 * https://docs.mulesoft.com/runtime-manager/runtime-manager-agent-architecture
 
 
